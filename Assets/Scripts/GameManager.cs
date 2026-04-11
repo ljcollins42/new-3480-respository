@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         horizontalScreenSize = 10f;
-        verticalScreenSize = 1f;
+        verticalScreenSize = 6f;
         score = 0;
         Instantiate(playerPrefab, transform.position, Quaternion.identity);
         CreateSky();

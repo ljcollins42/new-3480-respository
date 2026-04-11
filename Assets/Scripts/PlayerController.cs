@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
 
     public GameObject bulletPrefab;
+    public GameObject bullet2Prefab;
     public GameObject explosionPrefab;
 
     // Start is called before the first frame update
@@ -51,6 +52,10 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(bulletPrefab, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(bullet2Prefab, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        }
     }
 
     void Movement()
@@ -60,14 +65,14 @@ public class PlayerController : MonoBehaviour
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
 
         float horizontalScreenSize = gameManager.horizontalScreenSize;
-        float verticalScreenSize = gameManager.verticalScreenSize;
+        float verticalScreenSize = gameManager.verticalScreenSize / 2f;
 
         if (transform.position.x <= -horizontalScreenSize || transform.position.x > horizontalScreenSize)
         {
             transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
 
-        if (transform.position.y <= -4f || transform.position.y > verticalScreenSize)
+        if (transform.position.y <= -4f || transform.position.y > verticalScreenSize -2f)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y * -0.5f, 0);
         }
