@@ -13,6 +13,15 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (explosionPrefab == null && gameManager != null)
+        {
+            explosionPrefab = gameManager.enemyExplosionPrefab;
+        }
+
+        if (explosionPrefab == null)
+        {
+            Debug.LogWarning("Enemy has no explosionPrefab assigned and no fallback explosion prefab was found.");
+        }
     }
 
     // Update is called once per frame
