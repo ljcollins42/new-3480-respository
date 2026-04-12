@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     void ThirdEnemy()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 2.0f, verticalScreenSize,0);
-        SpawnEnemy(enemyThreePrefab, spawnPosition, Quaternion.Euler(0,180,0));
+        SpawnEnemy(enemyThreePrefab, spawnPosition, Quaternion.Euler(0,1800,0));
     }
 
     GameObject SpawnEnemy(GameObject prefab, Vector3 position, Quaternion rotation)
