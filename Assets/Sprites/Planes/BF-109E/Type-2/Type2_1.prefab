@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: df32426714727d649bf3f272e39bad2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 16, y: 16}
   m_AdaptiveModeThreshold: 0.5
@@ -179,5 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bacf542fc74029e459d29e9b90f6ebd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Glider
-  goingUp: 0
+  goingRight: 0
   speed: 0

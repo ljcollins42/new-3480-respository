@@ -65,16 +65,21 @@ public class PlayerController : MonoBehaviour
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
 
         float horizontalScreenSize = gameManager.horizontalScreenSize;
-        float verticalScreenSize = gameManager.verticalScreenSize / 2f;
+        float screenVerticalSize = gameManager.verticalScreenSize;
+        float topHalfThreshold = screenVerticalSize / 5f;
 
         if (transform.position.x <= -horizontalScreenSize || transform.position.x > horizontalScreenSize)
         {
             transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
 
-        if (transform.position.y <= -4f || transform.position.y > verticalScreenSize -2f)
+        if (transform.position.y >= topHalfThreshold)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y * -0.5f, 0);
+            transform.position = new Vector3(transform.position.x, -screenVerticalSize, 0f);
+        }
+        else if (transform.position.y <= -screenVerticalSize)
+        {
+            transform.position = new Vector3(transform.position.x, topHalfThreshold, 0f);
         }
 
     }
