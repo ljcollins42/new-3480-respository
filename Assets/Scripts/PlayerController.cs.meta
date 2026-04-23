@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d6cd60caef9c0cb4eac00f38203cd42c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bulletPrefab: {fileID: 8568965665149658710, guid: b1eed6253aa069845b0edf3f90db799d, type: 3}
+  - explosionPrefab: {fileID: 9118843918797915561, guid: 59bf1096580989f439d80ac9c72285e3, type: 3}
+  - thrusterPrefab: {fileID: 7902851611382185464, guid: 09916108e7cada847b38f4e384fb4ab9, type: 3}
+  - shieldPrefab: {fileID: 8053098046920713140, guid: dd36374d37203f3459a7e6220b1b18eb, type: 3}
+  - secondBullet: {fileID: 4065186884417058002, guid: 5ca9946ae00a5024fbbeb0db3fb66ef6, type: 3}
+  - coinPrefab: {fileID: 2394470122221135810, guid: e19a9fb0a66dee7478cdd6b52bf24347, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
